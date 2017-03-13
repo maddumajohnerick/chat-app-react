@@ -1,0 +1,124 @@
+html, body{
+  margin: 0px;
+  height: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+#react-root{
+  height: 100%;
+}
+
+#react-root > div{
+  height: 100%;
+}
+
+.my-body{
+  height: calc(100% - 64px);
+}
+
+.my-form-resize{
+  height: calc(100% - 72px);
+}
+
+.my-message-holder{
+  height: calc(100% - 106px);
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-y : scroll;
+  background: #BCBCBC;
+}
+
+.my-message-form{
+  padding: 0px 10px 0px 10px;
+}
+
+.my-sender-bubble{
+  float: right;
+  min-width:auto;
+  max-width:80%;
+  margin-bottom: 5px;
+  padding: 5px;
+  background: #9BCAD0 !important;
+  -webkit-animation: sender .5s; /* Chrome, Safari, Opera */
+  animation: sender .5s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes sender {
+    0%   {transform: translate(100%);}
+    50% {transform: translate(0);}
+}
+
+/* Standard syntax */
+@keyframes sender {
+  0%   {transform: translate(100%);}
+  50% {transform: translate(0);}
+}
+
+.my-receiver-bubble{
+  float: left;
+  min-width:auto;
+  max-width:80%;
+  margin-bottom: 5px;
+  padding: 5px;
+  background: #95DE98 !important;
+  -webkit-animation: receiver .5s; /* Chrome, Safari, Opera */
+  animation: receiver .5s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes receiver {
+    0%   {transform: translate(-100%);}
+    50% {transform: translate(0);}
+}
+
+/* Standard syntax */
+@keyframes receiver {
+  0%   {transform: translate(-100%);}
+  50% {transform: translate(0);}
+}
+
+.my-pull-right{
+  margin-top: 25px !important;
+  float: right !important;
+}
+
+.my-pull-left{
+  float: left !important;
+  width: calc(100% - 120px) !important;
+}
+
+::-webkit-scrollbar
+{
+  width: 4px;  /* for vertical scrollbars */
+  height: 4px; /* for horizontal scrollbars */
+  transition: .3s;
+}
+
+::-webkit-scrollbar-track
+{
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid hidden;
+  height: 40px;
+  transition: .3s;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: #FF9800;
+  border: 1px solid hidden;
+  border-radius:0px;
+  /* border-top: 100px solid #075e71; */
+  /* border-bottom: 100px solid #075e71; */
+  transition: .3s;
+}
+
+.my-receiver-bubble p{
+  margin: 0px !important;
+  padding-top: 3px;
+  padding-left: 10px;
+}
+
+.my-sender-bubble p{
+  margin: 0px !important;
+}
